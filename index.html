@@ -488,6 +488,109 @@ input:focus, select:focus, textarea:focus{ border-color: var(--cyan); box-shadow
 .wdLimit{ display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:8px; padding:8px 10px; border-radius:12px; background: rgba(6,10,26,.7); border: 1px solid rgba(255,210,74,.32); font-size:10.5px; color:#ffe08a }
 .wdLimit b{ color:#fff }
 .pressFx{ transition: transform .12s cubic-bezier(.2,1.5,.4,1) }
+/* ================= CASINO FLOOR v9 ================= */
+.casBanner{ position:relative; overflow:hidden; border-radius:18px; padding:14px 15px; margin-bottom:11px; cursor:pointer; background: linear-gradient(120deg,#ff3b4e 0%,#ff7a1e 38%,#ffd24a 62%,#2bff8a 100%); box-shadow:0 16px 34px rgba(255,90,30,.26); transition: transform .2s cubic-bezier(.2,1.3,.4,1) }
+.casBanner:active{ transform: scale(.985) }
+.casBanner .cbGlow{ position:absolute; top:-70%; left:-30%; width:55%; height:240%; background: linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent); transform: rotate(20deg); animation: gtShine 3.6s ease-in-out infinite }
+.casBanner .cbT{ position:relative; font-size:15px; font-weight:900; letter-spacing:.6px; color:#150207; text-transform:uppercase }
+.casBanner .cbS{ position:relative; font-size:10px; font-weight:700; color:rgba(20,2,8,.78); margin-top:3px }
+.casBanner .cbGo{ position:absolute; right:14px; top:50%; transform:translateY(-50%); font-size:22px; color:#150207 }
+.casSecT{ display:flex; align-items:center; gap:7px; margin:4px 0 9px }
+.casSecT .csLine{ flex:1; height:1px; background: linear-gradient(90deg, rgba(255,90,30,.6), transparent) }
+.casSecT b{ font-size:11px; letter-spacing:1.4px; text-transform:uppercase; color:#ff8a3d }
+.casScroll{ display:flex; gap:10px; overflow-x:auto; padding:3px 2px 12px; -webkit-overflow-scrolling:touch; scrollbar-width:none }
+.casScroll::-webkit-scrollbar{ display:none }
+.gtile{ position:relative; flex:0 0 auto; width:126px; height:162px; border-radius:16px; overflow:hidden; cursor:pointer; border:1px solid rgba(255,255,255,.14); box-shadow:0 10px 22px rgba(0,0,0,.45); transition: transform .22s cubic-bezier(.2,1.3,.4,1), box-shadow .25s ease }
+.gtile:hover{ transform: translateY(-6px) scale(1.03); box-shadow:0 20px 36px rgba(0,0,0,.6) }
+.gtile:active{ transform: scale(.96) }
+.gArt{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:58px; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)); transition: transform .38s cubic-bezier(.2,1.4,.4,1) }
+.gtile:hover .gArt{ transform: scale(1.16) rotate(-6deg) translateY(-4px) }
+.gShine{ position:absolute; top:-70%; left:-40%; width:42%; height:240%; background: linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent); transform: rotate(20deg); animation: gtShine 4.2s ease-in-out infinite }
+@keyframes gtShine{ 0%{ left:-60% } 55%{ left:160% } 100%{ left:160% } }
+.gName{ position:absolute; left:0; right:0; bottom:0; padding:26px 9px 11px; font-size:12px; font-weight:900; letter-spacing:.5px; text-transform:uppercase; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.95); background: linear-gradient(0deg, rgba(0,0,0,.88), transparent) }
+.gTag{ position:absolute; top:8px; left:8px; font-size:7.5px; font-weight:900; letter-spacing:.5px; padding:3px 6px; border-radius:999px; background: rgba(0,0,0,.6); color:#ffd24a; border:1px solid rgba(255,210,74,.45) }
+.gHot{ position:absolute; top:8px; right:8px; font-size:7.5px; font-weight:900; padding:3px 6px; border-radius:999px; background: linear-gradient(135deg,#ff3b4e,#ff9f1c); color:#fff; animation: hotPulse 1.5s ease-in-out infinite }
+@keyframes hotPulse{ 0%{ transform: scale(1) } 50%{ transform: scale(1.12) } 100%{ transform: scale(1) } }
+.aRlgl{ background: radial-gradient(circle at 50% 22%, #0d5e3a, #04170f 72%) }
+.aBj{ background: radial-gradient(circle at 32% 24%, #1f8a5c, #052a1d 72%) }
+.aBacc{ background: radial-gradient(circle at 32% 24%, #7b1fa2, #1b0730 72%) }
+.aWar{ background: radial-gradient(circle at 32% 24%, #b3261e, #2a0404 72%) }
+.aHilo{ background: radial-gradient(circle at 32% 24%, #0b7285, #04222c 72%) }
+.aTcp{ background: radial-gradient(circle at 32% 24%, #c2410c, #2c0f04 72%) }
+.aLimbo{ background: radial-gradient(circle at 32% 24%, #3b2fbf, #0a0733 72%) }
+.aBox{ background: radial-gradient(circle at 32% 24%, #d4a017, #33210a 72%) }
+.aPen{ background: radial-gradient(circle at 32% 24%, #16a34a, #04240f 72%) }
+.aMkt{ background: radial-gradient(circle at 32% 24%, #0e7490, #04202a 72%) }
+.aHorse{ background: radial-gradient(circle at 32% 24%, #a16207, #241503 72%) }
+.aOld{ background: radial-gradient(circle at 32% 24%, #2b3a8f, #0a0f2c 72%) }
+.cgBox{ border-color: rgba(255,138,61,.4) }
+.cgHead{ display:flex; align-items:center; gap:10px; margin-bottom:11px }
+.cgBack{ width:auto; margin:0; padding:7px 12px; font-size:13px }
+.cgTitle{ font-size:13.5px; font-weight:900; letter-spacing:.5px }
+.cgSub{ font-size:9.5px; color: var(--mut); margin-top:2px }
+.cgZone{ text-align:center; margin:6px 0 }
+.cgWho{ font-size:8.5px; letter-spacing:1.6px; color:#9fd8bb; margin-bottom:6px; font-weight:900 }
+.cgCards{ display:flex; justify-content:center; align-items:center; min-height:70px; flex-wrap:wrap }
+.cgVal{ display:inline-block; margin-top:6px; font-size:10px; font-weight:900; padding:3px 10px; border-radius:999px; background: rgba(0,0,0,.4); border:1px solid rgba(255,255,255,.18); color:#dff2e8 }
+.cgDivider{ height:1px; margin:11px 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent) }
+.cgMsg{ text-align:center; font-size:11px; font-weight:800; margin-top:9px; min-height:16px; color:#cfe6da }
+.cgMsg .w{ color:#2bff8a } .cgMsg .l{ color:#ff8a99 } .cgMsg .p{ color:#ffd24a }
+.cgRow{ display:flex; gap:7px; margin-top:10px }
+.cgRow .btn{ flex:1; width:auto; margin:0 }
+.cTable{ position:relative; border-radius:18px; padding:14px 12px; background: radial-gradient(ellipse at 50% -10%, #1a7a52, #073a26 55%, #031a11); border:1px solid rgba(43,255,138,.3); box-shadow: inset 0 0 46px rgba(0,0,0,.66) }
+.pc{ position:relative; display:inline-flex; flex-direction:column; justify-content:space-between; width:47px; height:67px; border-radius:8px; background: linear-gradient(160deg,#fff,#e4e9f6); color:#0f1630; border:1px solid rgba(0,0,0,.3); box-shadow:0 7px 15px rgba(0,0,0,.5); padding:4px 5px; margin:0 3px; font-weight:900; animation: dealIn .42s cubic-bezier(.2,1,.3,1) both }
+.pc.red{ color:#d21833 }
+.pc .pcT{ font-size:13px; line-height:1 }
+.pc .pcM{ font-size:19px; align-self:center; line-height:1 }
+.pc .pcB{ font-size:13px; align-self:flex-end; transform: rotate(180deg) }
+.pc.back{ background: repeating-linear-gradient(45deg,#16246b,#16246b 5px,#26379b 5px,#26379b 10px); border-color:#060c26 }
+.pc.back .pcX{ align-self:center; margin-top:22px; color:rgba(255,255,255,.55); font-size:19px }
+.pc.flip{ animation: flipIn .45s cubic-bezier(.2,1,.3,1) both }
+@keyframes dealIn{ 0%{ opacity:0; transform: translate(150px,-110px) rotate(32deg) scale(.55) } 100%{ opacity:1; transform:none } }
+@keyframes flipIn{ 0%{ transform: rotateY(92deg) } 100%{ transform: rotateY(0) } }
+.bZones{ display:grid; grid-template-columns: repeat(3,1fr); gap:7px; margin-top:10px }
+.bZone{ padding:12px 5px; border-radius:14px; font-size:10.5px; font-weight:900; letter-spacing:.5px; color:#fff; border:1px solid rgba(255,255,255,.22); background: rgba(6,10,26,.62); transition: transform .18s cubic-bezier(.2,1.4,.4,1), box-shadow .22s ease }
+.bZone b{ display:block; font-size:9px; color:#ffd24a; margin-top:3px }
+.bZone:active{ transform: scale(.95) }
+.bZone.p.on{ border-color:#22d3ff; box-shadow:0 0 22px rgba(34,211,255,.45); transform: translateY(-3px) }
+.bZone.b.on{ border-color:#ff3b4e; box-shadow:0 0 22px rgba(255,59,78,.45); transform: translateY(-3px) }
+.bZone.t.on{ border-color:#ffd24a; box-shadow:0 0 22px rgba(255,210,74,.5); transform: translateY(-3px) }
+.warGoal{ display:grid; grid-template-columns: repeat(3,1fr); gap:7px; margin:10px 0 }
+.penZone{ position:relative; padding:15px 4px; border-radius:11px; font-size:15px; font-weight:900; color:#eafff2; background: linear-gradient(160deg, rgba(255,255,255,.14), rgba(0,0,0,.4)); border:1px dashed rgba(255,255,255,.34); transition: transform .16s cubic-bezier(.2,1.5,.4,1), box-shadow .2s ease }
+.penZone:active{ transform: scale(.94) }
+.penZone.on{ border-style:solid; border-color:#2bff8a; box-shadow:0 0 20px rgba(43,255,138,.5) }
+.penField{ position:relative; height:120px; border-radius:14px; overflow:hidden; background: repeating-linear-gradient(90deg,#0e5a34,#0e5a34 26px,#0c4e2d 26px,#0c4e2d 52px); border:1px solid rgba(255,255,255,.16) }
+.penKeeper{ position:absolute; bottom:8px; left:50%; transform:translateX(-50%); font-size:38px; transition: left .5s cubic-bezier(.3,1.4,.4,1), transform .5s ease }
+.penBall{ position:absolute; bottom:10px; left:50%; transform:translateX(-50%); font-size:23px; transition: all .55s cubic-bezier(.3,.9,.3,1) }
+.limboC{ text-align:center; padding:16px 8px; border-radius:16px; background: radial-gradient(circle at 50% 120%, rgba(59,47,191,.5), rgba(6,10,26,.9)); border:1px solid rgba(120,110,255,.4); margin-bottom:10px }
+.limboV{ font-size:38px; font-weight:900; letter-spacing:-1px; color:#fff; text-shadow:0 0 26px rgba(140,120,255,.8); line-height:1.1 }
+.limboV.w{ color:#2bff8a; text-shadow:0 0 30px rgba(43,255,138,.85) }
+.limboV.l{ color:#ff5a6e; text-shadow:0 0 26px rgba(255,90,110,.7) }
+.limboS{ font-size:9.5px; color:#a9b6e8; letter-spacing:1px; margin-top:4px; text-transform:uppercase }
+.tickRow{ display:flex; gap:5px; overflow-x:auto; padding:4px 2px; scrollbar-width:none }
+.tickRow::-webkit-scrollbar{ display:none }
+.tick{ flex:0 0 auto; min-width:52px; padding:5px 7px; border-radius:9px; font-size:10.5px; font-weight:900; text-align:center; background: rgba(6,10,26,.7); border:1px solid rgba(255,90,110,.4); color:#ff98a6 }
+.tick.w{ border-color: rgba(43,255,138,.5); color:#8dffc6; background: rgba(43,255,138,.1) }
+.reelWrap{ position:relative; overflow:hidden; height:96px; border-radius:14px; background: rgba(6,10,26,.8); border:1px solid rgba(255,210,74,.4); margin-bottom:10px }
+.reel{ position:absolute; top:0; left:0; height:100%; display:flex; align-items:center; gap:8px; padding-left:8px; will-change: transform }
+.reelIt{ flex:0 0 auto; width:72px; height:82px; border-radius:11px; display:flex; flex-direction:column; align-items:center; justify-content:center; background: linear-gradient(165deg, rgba(40,52,110,.9), rgba(10,14,34,.95)); border:1px solid rgba(255,255,255,.16) }
+.reelIt span{ font-size:27px }
+.reelIt b{ font-size:10px; margin-top:4px; color:#ffd24a }
+.reelPtr{ position:absolute; top:0; bottom:0; left:50%; width:2px; margin-left:-1px; background: linear-gradient(180deg,#ffd24a,#ff5a1f); box-shadow:0 0 14px rgba(255,159,28,.9); z-index:3 }
+.horseTrack{ position:relative; border-radius:14px; overflow:hidden; background: rgba(6,10,26,.72); border:1px solid rgba(255,255,255,.14); padding:5px 0 }
+.hLane{ position:relative; height:34px; border-bottom:1px dashed rgba(255,255,255,.1); overflow:hidden }
+.hLane:last-child{ border-bottom:0 }
+.hRunner{ position:absolute; top:3px; left:2px; font-size:21px; transition: left 3.4s cubic-bezier(.25,.6,.3,1); filter: drop-shadow(0 3px 5px rgba(0,0,0,.6)) }
+.hName{ position:absolute; right:6px; top:9px; font-size:8.5px; color:#9fb0d8; letter-spacing:.4px }
+.hWin{ background: rgba(43,255,138,.14) }
+.mktC{ position:relative; height:132px; border-radius:14px; overflow:hidden; background: linear-gradient(180deg, rgba(14,116,144,.24), rgba(6,10,26,.9)); border:1px solid rgba(34,211,255,.3) }
+.mktC svg{ width:100%; height:100%; display:block }
+.mktP{ position:absolute; top:8px; left:11px; font-size:16px; font-weight:900; color:#fff }
+.mktD{ position:absolute; top:30px; left:11px; font-size:10px; font-weight:900 }
+.hiloM{ display:flex; justify-content:center; gap:7px; margin-top:9px; flex-wrap:wrap }
+.hiloBadge{ font-size:9.5px; font-weight:900; padding:4px 9px; border-radius:999px; background: rgba(6,10,26,.75); border:1px solid rgba(43,255,138,.4); color:#8dffc6 }
+.warn{ background: linear-gradient(135deg,#ffd24a,#ff7a1e) !important; color:#26120a !important }
+.btn[disabled]{ opacity:.5 }
 /* ================= RED LIGHT GREEN LIGHT ================= */
 .rlHead{ display:flex; align-items:center; gap:10px; margin-bottom:10px }
 .rlIcon{ width:40px; height:40px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:20px; flex:0 0 auto; background: linear-gradient(140deg,#2bff8a,#0a7a45); box-shadow: 0 0 20px rgba(43,255,138,.5); animation: rlIconPulse 2.2s ease-in-out infinite }
@@ -779,6 +882,12 @@ input:focus, select:focus, textarea:focus{ border-color: var(--cyan); box-shadow
   </div>
  </section>
  <section class="sec" id="sPlay">
+  <div class="casBanner" id="casBanner">
+   <div class="cbGlow"></div>
+   <div class="cbT">Casino Floor</div>
+   <div class="cbS">10 new live tables · bet real or demo coins</div>
+   <div class="cbGo">→</div>
+  </div>
   <div class="box">
    <div class="tagline">Game lobby</div>
    <h3 id="lblPick">Pick a game</h3>
@@ -788,7 +897,27 @@ input:focus, select:focus, textarea:focus{ border-color: var(--cyan); box-shadow
     <button class="modeChip demo" id="modeDemo" type="button">🧪 DEMO</button>
    </div>
    <p class="modeHint" id="modeHint">Playing with your <b>real</b> balance.</p>
+   <div class="casSecT"><b>🃏 New casino tables</b><div class="csLine"></div></div>
+   <div class="casScroll" id="casNew"></div>
+   <div class="casSecT"><b>🎡 Live rounds</b><div class="csLine"></div></div>
+   <div class="casScroll" id="casLive"></div>
+   <div class="casSecT"><b>♠ Classic games</b><div class="csLine"></div></div>
    <div id="gameGrid" class="grid" style="margin-top: 9px"></div>
+  </div>
+  <div class="box cgBox" id="cgBox" style="display: none">
+   <div class="cgHead">
+    <button class="btn alt cgBack" id="cgBack" type="button">←</button>
+    <div>
+     <div class="cgTitle" id="cgTitle">Game</div>
+     <div class="cgSub" id="cgSub">Place your bet</div>
+    </div>
+    <div style="margin-left:auto; text-align:right">
+     <div class="cgSub">balance</div>
+     <div class="big" id="cgBal" style="font-size:14px">--</div>
+    </div>
+   </div>
+   <div id="cgBody"></div>
+   <div class="cgMsg" id="cgMsg"></div>
   </div>
  </section>
  <section class="sec" id="sWallet">
@@ -1323,9 +1452,9 @@ input:focus, select:focus, textarea:focus{ border-color: var(--cyan); box-shadow
 <div id="toast"></div>
 <script>
 
-var APP='https://api.telebotcreator.com/new-webhook?data=gAAAAABq6OX4JP7xMmkwgVmKl560PLFa_DSduMgNZyyRsfo1IiRtJLA1dqmC6cy2vZ-Ehwor5u1pMCTkt97rHjAu7n-SYKktx_pKTWVJ203cCD-IUYP5VhmH4inbAEu4J9fewqm3w4ttZvIrx8AsrTDJvSdmLjqC3ArjVcnceyrkiE4NoPOWnhZvE2TCyzbpwN9P310os6df';
-var VER_EXPECTED=8;
-var BUILD=24;
+var APP='https://api.telebotcreator.com/new-webhook?data=gAAAAABq6PmwoweRCOxVElX1WD1Kooa3H5H9WbBqC3JwoBrvG21chPyxtEYzhMNFyB2U6IxS9tqF1AtKGvXTqoyjJSqQKBgT0ShZPWZiOVgXOfPwKuyuWS8sMPv4URzh71eb4jrdrirRZONob8K-Y5t4E74o8bNohQ-xN-iQ1-xKWZywkVzPcRgDRO-SIK7BuUFhEi0NeqYG';
+var VER_EXPECTED=9;
+var BUILD=25;
 var TG=null;
 try{ if(window.Telegram && window.Telegram.WebApp){ TG=window.Telegram.WebApp; TG.ready(); TG.expand(); } }catch(e){ TG=null; }
 var state={ uid:0, tgUser:'', tgFirst:'', token:'', coins:0, rate:100, isAdmin:false, isFull:false, registered:false, loggedIn:false, balOk:false, srvUid:'', ver:0, cur:'USD', lang:'en', fx:0, first:'', last:'', username:'', depMethods:[], wdMethods:[], deps:[], wds:[], users:[], userForce:{}, pcts:{}, notifs:[], unread:0, selUser:'', ctrlNow:{}, globalMode:'normal', pendMode:'', pendOp:'', pendUF:'', selDep:null, starRate:5, seenNotif:'', teamEq:0, teamSub:0, demo:0, demoWait:0, demoAmt:1000, demoPct:90, wdMin:10, supUser:'playnearnsupport', supId:'6796752260', mode:'real', myWds:[], tNames:{} };
@@ -1430,6 +1559,7 @@ function showTab(id){
  if(id==='sWd'){ loadWdMethods(); }
  if(id==='sHome'){ loadHome(); if(!rl.on) rlPull(); }
  if(id==='sBet'){ rlStart(); }
+ if(id==='sPlay'){ cgTiles(); cgState(); }
  if(id==='sRef'){ loadRef(); }
  if(id==='sAcc'){ loadSupport(); }
  if(id==='sAdm'){ adminRefresh(); }
@@ -1748,6 +1878,702 @@ function rlStop(){
  rl.on=false;
  if(rl.timer){ clearInterval(rl.timer); rl.timer=null; }
  if(rl.pull){ clearInterval(rl.pull); rl.pull=null; }
+}
+/* ================= CASINO FLOOR (client) ================= */
+var CG=[
+ {id:'rlgl',art:'aRlgl',em:'🚦',name:'Red Light',tag:'LIVE',hot:1,live:1},
+ {id:'crash',art:'aRlgl',em:'🚀',name:'Rocket Crash',tag:'LIVE',hot:1,old:'4'},
+ {id:'bj',art:'aBj',em:'🃏',name:'Speed Blackjack',tag:'20s',hot:1},
+ {id:'bacc',art:'aBacc',em:'👑',name:'Baccarat',tag:'PUNTO'},
+ {id:'war',art:'aWar',em:'⚔️',name:'Casino War',tag:'FAST'},
+ {id:'hilo',art:'aHilo',em:'📈',name:'Hi-Lo Streak',tag:'MULTI'},
+ {id:'tcp',art:'aTcp',em:'🎩',name:'3-Card Poker',tag:'PAIR+'},
+ {id:'limbo',art:'aLimbo',em:'🎯',name:'Limbo',tag:'TARGET'},
+ {id:'box',art:'aBox',em:'📦',name:'Mystery Box',tag:'OPEN'},
+ {id:'pen',art:'aPen',em:'🥅',name:'Penalty',tag:'SPORT'},
+ {id:'mkt',art:'aMkt',em:'📊',name:'60s Market',tag:'UP/DOWN'},
+ {id:'horse',art:'aHorse',em:'🐎',name:'Horse Race',tag:'WIN'},
+ {id:'wheel',art:'aOld',em:'🎡',name:'Wheel',tag:'LIVE',old:'7'},
+ {id:'plinko',art:'aOld',em:'🔴',name:'Plinko',tag:'DROP',old:'6'}
+];
+var cg={ cur:'', chips:[10,50,100,500], chip:50, busy:false, saved:{}, limbo:[], hilo:null, bj:null, war:null };
+function cgRank(r){
+ if(r==14) return 'A';
+ if(r==13) return 'K';
+ if(r==12) return 'Q';
+ if(r==11) return 'J';
+ return String(r);
+}
+function cgSuitSym(s){
+ if(s=='s') return '♠';
+ if(s=='h') return '♥';
+ if(s=='d') return '♦';
+ return '♣';
+}
+function cgIsRed(s){ return (s=='h' || s=='d'); }
+function pcEl(c, flip){
+ var d=document.createElement('div');
+ d.className='pc';
+ if(flip){
+  d.classList.add('back');
+  d.innerHTML='<div class="pcX">♠</div>';
+  return d;
+ }
+ var r=cgRank(parseInt(c[0])||2);
+ var sy=cgSuitSym(String(c[1]||'s'));
+ if(cgIsRed(String(c[1]||'s'))) d.classList.add('red');
+ d.innerHTML='<div class="pcT">'+r+sy+'</div><div class="pcM">'+sy+'</div><div class="pcB">'+r+sy+'</div>';
+ return d;
+}
+function cgCardRow(box, arr, opts){
+ if(!box) return;
+ box.innerHTML='';
+ var n=arr.length;
+ for(var i=0;i<n;i++){
+  var hide=(opts && opts.hideSecond && i==1);
+  var p=pcEl(arr[i], hide);
+  p.style.animationDelay=(i*0.11)+'s';
+  if(opts && opts.flip && i==n-1) p.classList.add('flip');
+  box.appendChild(p);
+ }
+}
+function cgBal(){
+ var b=el('cgBal');
+ if(b) b.textContent=String((state.mode==='demo'? state.demo : state.coins).toLocaleString())+'c';
+}
+function cgMsg(html){
+ var m=el('cgMsg');
+ if(m) m.innerHTML=html||'';
+}
+function cgChipsRender(box, onPick){
+ if(!box) return;
+ box.innerHTML='';
+ var bal=(state.mode==='demo'? state.demo : state.coins);
+ var base=[10,50,100,500,1000,5000];
+ var seen=[];
+ for(var i=0;i<base.length;i++){
+  if(base[i]>Math.max(bal,1)*3 && base[i]>500) continue;
+  if(seen.indexOf(base[i])>=0) continue;
+  seen.push(base[i]);
+ }
+ if(!seen.length) seen=[10];
+ if(seen.indexOf(cg.chip)<0) cg.chip=seen[0];
+ seen.forEach(function(v){
+  var b=document.createElement('button');
+  b.type='button'; b.className='rlChip'+(v===cg.chip?' on':''); b.textContent=v;
+  b.addEventListener('click',function(){
+   cg.chip=v; sfx('click');
+   var all=box.querySelectorAll('button');
+   for(var k=0;k<all.length;k++){ all[k].classList.remove('on'); }
+   b.classList.add('on');
+   if(onPick) onPick(v);
+  });
+  box.appendChild(b);
+ });
+}
+function cgModeNote(){
+ return (state.mode==='demo') ? '🧪 demo coins' : '💰 real coins';
+}
+function cgApi(game, op, extra){
+ if(cg.busy) return;
+ cg.busy=true;
+ var p={ game:game, op:op, amount:cg.chip, mode:(state.mode==='demo'?'demo':'real') };
+ if(extra){ for(var k in extra){ p[k]=extra[k]; } }
+ call('cg_play', p).then(function(j){
+  cg.busy=false;
+  if(!j || !j.ok){
+   cgMsg('<span class="l">'+esc((j&&j.error)||'failed')+'</span>');
+   sfx('lose');
+   if(j && typeof j.coins!=='undefined'){ state.coins=parseInt(j.coins)||0; }
+   if(j && typeof j.demo!=='undefined'){ state.demo=parseInt(j.demo)||0; }
+   updBal(); renderDemo(); cgBal();
+   if(cg.cur) cgRender(cg.cur);
+   return;
+  }
+  if(typeof j.coins!=='undefined'){ state.coins=parseInt(j.coins)||0; state.balOk=true; }
+  if(typeof j.demo!=='undefined'){ state.demo=parseInt(j.demo)||0; }
+  updBal(); renderDemo(); cgBal();
+  cgRender(j.game, j);
+ });
+}
+function cgOpen(id){
+ var g=null;
+ CG.forEach(function(x){ if(x.id===id) g=x; });
+ if(!g) return;
+ if(g.live){ showTab('sBet'); return; }
+ if(g.old){
+  var found=null;
+  GAMES.forEach(function(x){ if(String(x.id)===String(g.old)) found=x; });
+  if(found){ showTab('sPlay'); setTimeout(function(){ playGame(found.id); },200); }
+  return;
+}
+ cg.cur=id;
+ var box=el('cgBox');
+ if(box) box.style.display='block';
+ var t=el('cgTitle'); if(t) t.textContent=g.name;
+ var s=el('cgSub'); if(s) s.textContent='Bet '+cgModeNote();
+ cgBal();
+ cgRender(id);
+ if(box){ try{ box.scrollIntoView({behavior:'smooth', block:'center'}); }catch(eS){ box.scrollIntoView(); } }
+ sfx('click'); haptic('light');
+}
+function cgClose(){
+ cg.cur='';
+ var box=el('cgBox'); if(box) box.style.display='none';
+ cgMsg('');
+}
+function cgRender(id, j){
+ if(!id) return;
+ var body=el('cgBody');
+ if(!body) return;
+ if(id!=='bj') cg.bj=null;
+ if(id!=='hilo') cg.hilo=null;
+ if(id!=='war') cg.war=null;
+ if(id==='bj'){ cgRBJ(body, j); }
+ else if(id==='bacc'){ cgRBacc(body, j); }
+ else if(id==='war'){ cgRWar(body, j); }
+ else if(id==='hilo'){ cgRHilo(body, j); }
+ else if(id==='tcp'){ cgRTcp(body, j); }
+ else if(id==='limbo'){ cgRLimbo(body, j); }
+ else if(id==='box'){ cgRBox(body, j); }
+ else if(id==='pen'){ cgRPen(body, j); }
+ else if(id==='mkt'){ cgRMkt(body, j); }
+ else if(id==='horse'){ cgRHorse(body, j); }
+ else { body.innerHTML='<p class="hint">Table coming soon.</p>'; }
+ try{ cgLabels(); }catch(eL){}
+}
+function cgTiles(){
+ var nw=el('casNew');
+ var lv=el('casLive');
+ if(nw) nw.innerHTML='';
+ if(lv) lv.innerHTML='';
+ CG.forEach(function(g){
+  var d=document.createElement('div');
+  d.className='gtile '+g.art;
+  d.innerHTML='<div class="gShine"></div><div class="gArt">'+g.em+'</div><div class="gName">'+esc(g.name)+'</div>'+(g.tag?'<div class="gTag">'+esc(g.tag)+'</div>':'')+(g.hot?'<div class="gHot">HOT</div>':'');
+  d.addEventListener('click',function(){ cgOpen(g.id); });
+  if(g.live || g.old){ if(lv) lv.appendChild(d); }
+  else { if(nw) nw.appendChild(d); }
+ });
+}
+function cgLabels(){
+ try{
+  var all=document.querySelectorAll('[data-lbl]');
+  for(var i=0;i<all.length;i++){
+   var t=all[i].getAttribute('data-lbl');
+   all[i].textContent=t.replace('{a}', cg.chip);
+  }
+ }catch(e){}
+}
+function cgBtn(txt, cls, fn, lbl){
+ var b=document.createElement('button');
+ b.type='button'; b.className='btn '+(cls||'');
+ b.textContent=txt;
+ if(lbl){ b.setAttribute('data-lbl', lbl); }
+ b.addEventListener('click', function(){ if(b.disabled) return; fn(); });
+ return b;
+}
+function cgRowOf(body, id){
+ var r=document.createElement('div');
+ r.className='cgRow';
+ if(id){ r.id=id; }
+ body.appendChild(r);
+ return r;
+}
+function cgRes(j){
+ if(!j) return '';
+ var w=parseInt(j.won||0)||0;
+ if(j.win==='win' || j.win===true || j.win==='player' || j.win==='blackjack'){
+  if(j.win==='blackjack') return '<span class="w">BLACKJACK! +'+w.toLocaleString()+'c</span>';
+  return '<span class="w">YOU WIN +'+w.toLocaleString()+'c</span>';
+ }
+ if(j.win==='push' || j.win==='tie') return '<span class="p">PUSH - stake returned</span>';
+ if(j.win==='surrender') return '<span class="p">SURRENDERED - half back ('+w.toLocaleString()+'c)</span>';
+ return '<span class="l">YOU LOSE -'+parseInt(j.cost||0).toLocaleString()+'c</span>';
+}
+function cgRBJ(body, j){
+ body.innerHTML='';
+ if(j && j.game==='bj'){ cg.bj = (j.st==='play') ? {p:j.p, hd:j.hd} : null; }
+ if(!j && !cg.bj && cg.saved && cg.saved.bj && cg.saved.bj.st==='play'){
+  cg.bj={p:cg.saved.bj.p, hd:[cg.saved.bj.b[0]]};
+ }
+ body.innerHTML=
+  '<div class="cTable">'+
+   '<div class="cgWho">DEALER</div>'+
+   '<div class="cgCards" id="bjD"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="bjDv">-</span></div>'+
+   '<div class="cgDivider"></div>'+
+   '<div class="cgWho" style="color:#ffe9a8">YOU</div>'+
+   '<div class="cgCards" id="bjP"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="bjPv">-</span></div>'+
+  '</div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="bjC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('bjC'), cgLabels);
+ var row=cgRowOf(body,'bjA');
+ var play=!!cg.bj;
+ if(play){
+  cgCardRow(el('bjP'), cg.bj.p, {});
+  cgCardRow(el('bjD'), cg.bj.hd, {});
+  var pv=cgBjVal(cg.bj.p);
+  el('bjPv').textContent=pv;
+  el('bjDv').textContent='shows '+cgRank(parseInt(cg.bj.hd[0][0])||2);
+  row.appendChild(cgBtn('Hit','okbtn',function(){ cgApi('bj','hit'); },'Hit'));
+  row.appendChild(cgBtn('Stand','alt',function(){ cgApi('bj','stand'); },'Stand'));
+  row.appendChild(cgBtn('Double','warn',function(){ cgApi('bj','double'); },'Double {a}'));
+  cgBjTimer();
+ } else {
+  if(j && j.p){
+   cgCardRow(el('bjP'), j.p, {});
+   cgCardRow(el('bjD'), j.b||[], {flip:true});
+   el('bjPv').textContent=parseInt(j.pv||0);
+   el('bjDv').textContent=parseInt(j.dv||0);
+  } else {
+   cgCardRow(el('bjP'), [], {});
+   cgCardRow(el('bjD'), [], {});
+  }
+  row.appendChild(cgBtn('Deal {a}c','okbtn',function(){ cgApi('bj','deal'); },'Deal {a}c'));
+ }
+ if(j && j.st!=='play'){ cgMsg(cgRes(j)); burst(j.won>0?'♠️':'',10); sfx(j.won>0?'win':'lose'); }
+ else if(!play){ cgMsg('Two cards, beat the dealer. Blackjack pays 2.5x.'); }
+}
+function cgBjVal(h){
+ var t=0, soft=0;
+ for(var i=0;i<h.length;i++){
+  var r=parseInt(h[i][0])||0;
+  if(r==14){ t=t+11; soft=soft+1; }
+  else if(r>=10){ t=t+10; }
+  else { t=t+r; }
+ }
+ for(var k=0;k<4;k++){ if(t>21 && soft>0){ t=t-10; soft=soft-1; } else { break; } }
+ return t;
+}
+function cgBjTimer(){
+ if(cg.bjT){ clearInterval(cg.bjT); cg.bjT=null; }
+ var left=20;
+ cg.bjT=setInterval(function(){
+  if(!cg.bj){ clearInterval(cg.bjT); cg.bjT=null; return; }
+  left=left-1;
+  var m=el('cgMsg');
+  if(m && left<=10 && left>0 && !cg.busy){ m.innerHTML='<span class="p">Speed round - auto-stand in '+left+'s</span>'; }
+  if(left<=0){
+   clearInterval(cg.bjT); cg.bjT=null;
+   if(cg.bj && !cg.busy){ cgApi('bj','stand'); }
+  }
+ },1000);
+}
+function cgRBacc(body, j){
+ body.innerHTML=
+  '<div class="cTable">'+
+   '<div class="cgWho">BANKER</div>'+
+   '<div class="cgCards" id="bcD"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="bcDv">-</span></div>'+
+   '<div class="cgDivider"></div>'+
+   '<div class="cgWho" style="color:#9fd8ff">PLAYER</div>'+
+   '<div class="cgCards" id="bcP"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="bcPv">-</span></div>'+
+  '</div>'+
+  '<div class="bZones">'+
+   '<div class="bZone p" id="bzP">PLAYER<b>2x</b></div>'+
+   '<div class="bZone b" id="bzB">BANKER<b>1.95x</b></div>'+
+   '<div class="bZone t" id="bzT">TIE<b>9x</b></div>'+
+  '</div>'+
+  '<div class="rlChips" style="margin-top:9px"><span class="rlChipsLbl">Chips</span><div id="bcC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('bcC'), cgLabels);
+ if(j && j.game==='bacc'){
+  cgCardRow(el('bcP'), j.p||[], {flip:true});
+  cgCardRow(el('bcD'), j.b||[], {flip:true});
+  el('bcPv').textContent='total '+parseInt(j.pt||0);
+  el('bcDv').textContent='total '+parseInt(j.dt||0);
+  cgMsg('Banker drew '+(j.b||[]).length+' cards · '+cgRes(j));
+  burst(j.won>0?'👑':'💔',10); sfx(j.won>0?'win':'lose');
+ } else { cgMsg('Pick a side - natural 8 or 9 wins instantly.'); }
+ var side='';
+ function setSide(s, on){
+  side=s;
+  el('bzP').classList.toggle('on', s==='player');
+  el('bzB').classList.toggle('on', s==='banker');
+  el('bzT').classList.toggle('on', s==='tie');
+  sfx('click');
+  go.textContent='Bet {a}c on '+s.toUpperCase();
+  go.setAttribute('data-lbl','Bet {a}c on '+s.toUpperCase());
+  cgLabels();
+ }
+ var row=cgRowOf(body);
+ var go=cgBtn('Choose a side first','okbtn',function(){
+  if(!side){ cgMsg('<span class="l">Pick Player, Banker or Tie</span>'); sfx('lose'); return; }
+  cgApi('bacc','deal',{ pick:side });
+ });
+ row.appendChild(go);
+ el('bzP').addEventListener('click',function(){ setSide('player'); });
+ el('bzB').addEventListener('click',function(){ setSide('banker'); });
+ el('bzT').addEventListener('click',function(){ setSide('tie'); });
+}
+function cgRWar(body, j){
+ body.innerHTML=
+  '<div class="cTable">'+
+   '<div class="cgWho">DEALER</div>'+
+   '<div class="cgCards" id="wD"></div>'+
+   '<div class="cgDivider"></div>'+
+   '<div class="cgWho" style="color:#ffe9a8">YOU</div>'+
+   '<div class="cgCards" id="wP"></div>'+
+  '</div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="wC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('wC'), cgLabels);
+ var row=cgRowOf(body);
+ var tie=(j && j.st==='tie');
+ if(j && j.p && !tie){
+  cgCardRow(el('wP'), j.p, {flip:true});
+  cgCardRow(el('wD'), j.b||[], {flip:true});
+  cgMsg(cgRes(j));
+  burst(j.won>0?'⚔️':'💔',10); sfx(j.won>0?'win':'lose');
+ } else if(tie){
+  cgCardRow(el('wP'), j.p, {});
+  cgCardRow(el('wD'), j.b||[], {});
+  cgMsg('<span class="p">EQUAL CARDS - go to war for double, or surrender half</span>');
+  row.appendChild(cgBtn('Go to War {a}c','warn',function(){ cgApi('war','war'); },'Go to War {a}c'));
+  row.appendChild(cgBtn('Surrender','alt',function(){ cgApi('war','surrender'); },'Surrender'));
+  sfx('win');
+ } else {
+  var sv=(cg.saved && cg.saved.war && cg.saved.war.st==='tie');
+  if(sv){ cgMsg('<span class="p">Your tie is still open - war or surrender</span>'); }
+  else { cgMsg('Highest card wins 2x. Ties go to war.'); }
+  row.appendChild(cgBtn('Deal {a}c','okbtn',function(){ cgApi('war','deal'); },'Deal {a}c'));
+ }
+}
+function cgRHilo(body, j){
+ body.innerHTML=
+  '<div class="cTable">'+
+   '<div class="cgWho">CURRENT CARD</div>'+
+   '<div class="cgCards" id="hC"></div>'+
+   '<div class="hiloM" id="hM"></div>'+
+  '</div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="hChips" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('hChips'), cgLabels);
+ var run=!!cg.hilo;
+ if(j && j.game==='hilo'){
+  if(j.st==='play'){ cg.hilo={c:j.c, s:j.s, m:j.m}; run=true; }
+  else { cg.hilo=null; }
+ }
+ if(!j && !cg.hilo && cg.saved && cg.saved.hilo && cg.saved.hilo.st==='play'){
+  cg.hilo={c:cg.saved.hilo.c, s:cg.saved.hilo.s, m:cg.saved.hilo.m}; run=true;
+ }
+ if(run && cg.hilo){
+  cgCardRow(el('hC'), cg.hilo.c||[], {flip:(!!(j&&j.new))});
+  var mm=el('hM');
+  mm.innerHTML='<span class="hiloBadge">streak '+parseInt(cg.hilo.s||0)+'</span><span class="hiloBadge">cash out '+parseFloat(cg.hilo.m||1).toFixed(2)+'x</span><span class="hiloBadge">next '+parseFloat(j&&j.next?j.next:1.8).toFixed(2)+'x</span>';
+  var row=cgRowOf(body);
+  row.appendChild(cgBtn('⬆ Higher','okbtn',function(){ cgApi('hilo','up'); },'Higher'));
+  row.appendChild(cgBtn('⬇ Lower','alt',function(){ cgApi('hilo','down'); },'Lower'));
+  row.appendChild(cgBtn('Cash out','warn',function(){ cgApi('hilo','cash'); },'Cash out'));
+  if(j && j.st==='play'){ cgMsg('<span class="w">CORRECT - now at '+parseFloat(j.m).toFixed(2)+'x</span>'); sfx('win'); burst('📈',8); }
+  else { cgMsg('Keep guessing right - the multiplier compounds.'); }
+ } else {
+  var row2=cgRowOf(body);
+  row2.appendChild(cgBtn('Start streak {a}c','okbtn',function(){ cgApi('hilo','start'); },'Start streak {a}c'));
+  if(j && j.st==='lost'){ cgMsg('<span class="l">STREAK OVER - lost '+parseInt(j.cost||0).toLocaleString()+'c</span>'); sfx('lose'); }
+  else if(j && j.st==='cashed'){ cgMsg('<span class="w">CASHED OUT +'+parseInt(j.won||0).toLocaleString()+'c at '+parseFloat(j.m||1).toFixed(2)+'x</span>'); sfx('win'); burst('💰',14); confetti(); }
+  else { cgMsg('Guess if the next card is higher or lower. Cash out any time.'); }
+ }
+}
+function cgRTcp(body, j){
+ body.innerHTML=
+  '<div class="cTable">'+
+   '<div class="cgWho">DEALER</div>'+
+   '<div class="cgCards" id="tD"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="tDn">-</span></div>'+
+   '<div class="cgDivider"></div>'+
+   '<div class="cgWho" style="color:#ffe9a8">YOU</div>'+
+   '<div class="cgCards" id="tP"></div>'+
+   '<div style="text-align:center;margin-top:6px"><span class="cgVal" id="tPn">-</span></div>'+
+  '</div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="tC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>'+
+  '<div class="cgRow" id="tSide"></div>';
+ cgChipsRender(el('tC'), cgLabels);
+ var srow=el('tSide');
+ var tg=cgBtn('Pair Plus: OFF','alt',function(){
+  cg.tcpSide=!cg.tcpSide;
+  tg.textContent='Pair Plus: '+(cg.tcpSide?'ON':'OFF');
+  tg.className='btn '+(cg.tcpSide?'warn':'alt');
+  sfx('click');
+ });
+ srow.appendChild(tg);
+ var row=cgRowOf(body);
+ row.appendChild(cgBtn('Deal {a}c + side','okbtn',function(){
+  cgApi('tcp','deal',{ side: cg.tcpSide? cg.chip : 0 });
+ },'Deal {a}c + side'));
+ if(j && j.game==='tcp'){
+  cgCardRow(el('tP'), j.p||[], {flip:true});
+  cgCardRow(el('tD'), j.b||[], {flip:true});
+  el('tPn').textContent=j.pn||'-';
+  el('tDn').textContent=(j.qual? (j.dn||'-') : 'NO QUALIFY');
+  var extra=(j.pp_win>0)? (' · PAIR PLUS +'+parseInt(j.pp_win).toLocaleString()+'c') : '';
+  cgMsg(cgRes(j)+extra);
+  burst(j.won>0?'🎩':'💔',10); sfx(j.won>0?'win':'lose');
+ } else { cgMsg('Beat the dealer, or hit a Pair Plus hand for up to 40x.'); }
+}
+function cgRLimbo(body, j){
+ body.innerHTML=
+  '<div class="limboC"><div class="limboV" id="lV">1.00x</div><div class="limboS" id="lS">target below the line</div></div>'+
+  '<div class="tickRow" id="lT"></div>'+
+  '<label class="lb" style="margin-top:10px">Target multiplier</label>'+
+  '<input id="lIn" type="number" step="0.1" min="1.05" max="500" value="2.0"/>'+
+  '<div class="rlChips" style="margin-top:8px"><span class="rlChipsLbl">Chips</span><div id="lC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('lC'), cgLabels);
+ var row=cgRowOf(body);
+ row.appendChild(cgBtn('Roll {a}c','okbtn',function(){
+  var t=parseFloat((el('lIn')||{}).value||'2');
+  if(!(t>=1.05)){ cgMsg('<span class="l">Target must be 1.05 or higher</span>'); return; }
+  cgApi('limbo','roll',{ target:t });
+ },'Roll {a}c'));
+ function drawTicks(){
+  var box=el('lT'); if(!box) return;
+  box.innerHTML='';
+  if(!cg.limbo.length){ var p=document.createElement('span'); p.className='hint'; p.textContent='No rounds yet.'; box.appendChild(p); return; }
+  for(var i=0;i<Math.min(cg.limbo.length,20);i++){
+   var d=document.createElement('div');
+   d.className='tick'+(cg.limbo[i].w?' w':'');
+   d.textContent=parseFloat(cg.limbo[i].m).toFixed(2)+'x';
+   box.appendChild(d);
+  }
+ }
+ drawTicks();
+ if(j && j.game==='limbo'){
+  cg.limbo.unshift({m:j.m,w:j.win});
+  if(cg.limbo.length>30){ cg.limbo=cg.limbo.slice(0,30); }
+  drawTicks();
+  var v=el('lV'); var sp=1.0; var tgt=parseFloat(j.tgt)||2;
+  if(cg.limboT){ clearInterval(cg.limboT); }
+  var steps=0;
+  cg.limboT=setInterval(function(){
+   steps=steps+1;
+   sp=sp+(parseFloat(j.m)-sp)*0.28;
+   if(v){ v.textContent=sp.toFixed(2)+'x'; v.className='limboV'; }
+   if(steps>26){
+    clearInterval(cg.limboT); cg.limboT=null;
+    if(v){ v.textContent=parseFloat(j.m).toFixed(2)+'x'; v.className='limboV '+(j.win?'w':'l'); }
+    var s2=el('lS');
+    if(s2){ s2.textContent=(j.win? 'CLEARED '+tgt+'x' : 'CRASHED BELOW '+tgt+'x')+' · chance '+parseFloat(j.prob).toFixed(2)+'%'; }
+    cgMsg(cgRes(j));
+    burst(j.win?'🎯':'💔',10); sfx(j.win?'win':'lose');
+   }
+  },45);
+ } else { cgMsg('Pick a target - the roll must land on or above it.'); }
+}
+function cgRBox(body, j){
+ body.innerHTML=
+  '<div class="reelWrap"><div class="reel" id="rR"></div><div class="reelPtr"></div></div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="rC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('rC'), cgLabels);
+ var row=cgRowOf(body);
+ var BOX_T=[['💨',0,'Nothing'],['🔵',1.2,'Common'],['🟢',1.5,'Uncommon'],['🟣',2,'Rare'],['🟠',3,'Epic'],['🔴',5,'Legend'],['⚡',10,'Mythic'],['👑',25,'Immortal']];
+ function buildReel(){
+  var r=el('rR'); if(!r) return;
+  r.innerHTML='';
+  r.style.transition='none';
+  r.style.transform='translateX(0px)';
+  for(var i=0;i<44;i++){
+   var t=BOX_T[i%BOX_T.length];
+   var d=document.createElement('div');
+   d.className='reelIt';
+   d.innerHTML='<span>'+t[0]+'</span><b>'+t[1]+'x</b>';
+   r.appendChild(d);
+  }
+ }
+ buildReel();
+ row.appendChild(cgBtn('Open box {a}c','okbtn',function(){
+  cgApi('box','open');
+ },'Open box {a}c'));
+ if(j && j.game==='box'){
+  var idx=30;
+  for(var k=0;k<BOX_T.length;k++){ if(BOX_T[k][2]===j.tier){ idx=k + 24 - (24%BOX_T.length); } }
+  var r=el('rR');
+  if(r){
+   var items=r.querySelectorAll('.reelIt');
+   var pick=36;
+   for(var q=0;q<items.length;q++){
+    var tt=BOX_T[q%BOX_T.length];
+    items[q].innerHTML='<span>'+tt[0]+'</span><b>'+tt[1]+'x</b>';
+   }
+   items[pick].innerHTML='<span>'+esc(j.em)+'</span><b>'+parseFloat(j.m)+'x</b>';
+   var wrap=el('rR').parentNode;
+   var mid=wrap.clientWidth/2;
+   var off=(pick*80)+40-mid;
+   setTimeout(function(){
+    r.style.transition='transform 3.4s cubic-bezier(.12,.85,.2,1)';
+    r.style.transform='translateX(-'+off+'px)';
+   },60);
+   setTimeout(function(){
+    cgMsg('<span class="'+(j.won>0?'w':'l')+'">'+esc(j.tier).toUpperCase()+' '+parseFloat(j.m)+'x → +'+parseInt(j.won||0).toLocaleString()+'c</span>');
+    burst(j.em, j.won>0?16:6); sfx(j.won>0?'win':'lose');
+    if(j.m>=5){ confetti(); }
+   },3500);
+  }
+ } else { cgMsg('Each box pays 1.2x to 25x - the reel slows on your prize.'); }
+}
+function cgRPen(body, j){
+ body.innerHTML=
+  '<div class="penField" id="pF">'+
+   '<div class="penKeeper" id="pK">🧤</div>'+
+   '<div class="penBall" id="pB">⚽</div>'+
+  '</div>'+
+  '<div class="warGoal" id="pZ"></div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="pC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('pC'), cgLabels);
+ var zbox=el('pZ');
+ var zones=['↖ TL','⬆ TOP','↗ TR','↙ BL','⬇ LOW','↘ BR'];
+ var chosen=0;
+ var row=cgRowOf(body);
+ var go=cgBtn('Shoot {a}c','okbtn',function(){
+  if(!chosen){ cgMsg('<span class="l">Pick a corner first</span>'); sfx('lose'); return; }
+  cgApi('pen','shoot',{ pick:chosen });
+ },'Shoot {a}c');
+ row.appendChild(go);
+ for(var i=1;i<=6;i++){
+  (function(z){
+   var b=document.createElement('button');
+   b.type='button'; b.className='penZone'; b.textContent=zones[z-1];
+   b.addEventListener('click',function(){
+    chosen=z;
+    var all=zbox.querySelectorAll('button');
+    for(var k=0;k<all.length;k++){ all[k].classList.remove('on'); }
+    b.classList.add('on'); sfx('click');
+   });
+   zbox.appendChild(b);
+  })(i);
+ }
+ if(j && j.game==='pen'){
+  var zc=(parseInt(j.z)||1)-1;
+  var kc=(parseInt(j.k)||1)-1;
+  var col=zc%3, zrow=Math.floor(zc/3);
+  var kcol=kc%3, krow=Math.floor(kc/3);
+  var K=el('pK'), B=el('pB'), F=el('pF');
+  if(K && F){
+   var w=F.clientWidth;
+   K.style.left=((kcol*33)+16)+'%';
+   if(krow==0){ K.style.bottom='52px'; } else { K.style.bottom='8px'; }
+   B.style.left=((col*33)+16)+'%';
+   B.style.bottom=(zrow==0? '78px':'10px');
+   B.style.transform='translateX(-50%) scale(.6)';
+   setTimeout(function(){ if(B){ B.style.left=((col*33)+16)+'%'; B.style.bottom=(zrow==0?'92px':'26px'); B.style.transform='translateX(-50%) scale(1)'; } },80);
+  }
+  setTimeout(function(){
+   cgMsg(j.win? ('<span class="w">GOAL! keeper dived '+zones[kc]+' · +'+parseInt(j.won||0).toLocaleString()+'c</span>') : ('<span class="l">SAVED - keeper guessed right</span>'));
+   burst(j.win?'⚽':'🧤',12); sfx(j.win?'win':'lose');
+  },900);
+ } else { cgMsg('Score past the keeper - 1.85x if he guesses wrong.'); }
+}
+function cgRMkt(body, j){
+ body.innerHTML=
+  '<div class="mktC"><svg id="mS" viewBox="0 0 300 120" preserveAspectRatio="none"></svg><div class="mktP" id="mP">--</div><div class="mktD" id="mD"></div></div>'+
+  '<div class="rlChips"><span class="rlChipsLbl">Chips</span><div id="mC" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('mC'), cgLabels);
+ var row=cgRowOf(body);
+ row.appendChild(cgBtn('📈 Up {a}c','okbtn',function(){ cgApi('mkt','round',{ pick:'up' }); },'📈 Up {a}c'));
+ row.appendChild(cgBtn('📉 Down {a}c','alt',function(){ cgApi('mkt','round',{ pick:'down' }); },'📉 Down {a}c'));
+ function drawPath(path, animate){
+  var svg=el('mS'); if(!svg || !path || !path.length) return;
+  var mn=path[0], mx=path[0];
+  for(var i=0;i<path.length;i++){ if(path[i]<mn) mn=path[i]; if(path[i]>mx) mx=path[i]; }
+  var rg=(mx-mn)||1;
+  var pts=[];
+  for(var k=0;k<path.length;k++){
+   var x=(k/(path.length-1))*300;
+   var y=110-((path[k]-mn)/rg)*95;
+   pts.push(x.toFixed(1)+','+y.toFixed(1));
+  }
+  var up=path[path.length-1]>=path[0];
+  var col=up?'#2bff8a':'#ff5a6e';
+  svg.innerHTML='<polyline id="mL" points="'+pts.join(' ')+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/>'+
+   '<polygon points="0,120 '+pts.join(' ')+' 300,120" fill="'+col+'" opacity="0.14"/>';
+  if(animate){
+   var ln=el('mL');
+   if(ln){
+    try{
+     var len=ln.getTotalLength();
+     ln.style.strokeDasharray=len;
+     ln.style.strokeDashoffset=len;
+     setTimeout(function(){ ln.style.transition='stroke-dashoffset 1.6s linear'; ln.style.strokeDashoffset=0; },30);
+    }catch(e){}
+   }
+  }
+  var p=el('mP'); if(p){ p.textContent=path[path.length-1].toLocaleString(); }
+  var d=el('mD');
+  if(d){
+   var pc=parseFloat(j&&j.pct?j.pct:0);
+   d.innerHTML='<span style="color:'+col+'">'+(pc>=0?'+':'')+pc.toFixed(2)+'%</span>';
+  }
+ }
+ var fake=[];
+ var base=64000+Math.floor(Math.random()*9000);
+ for(var i=0;i<13;i++){ fake.push(round2(base*(1+(Math.random()-0.5)*0.02))); }
+ drawPath(fake,false);
+ if(j && j.game==='mkt'){
+  drawPath(j.path||fake,true);
+  setTimeout(function(){
+   cgMsg('Candle closed '+String(j.dir).toUpperCase()+' · '+cgRes(j));
+   burst(j.win?'📈':'📉',10); sfx(j.win?'win':'lose');
+  },1500);
+ } else { cgMsg('60 second market - call the next candle for 1.9x.'); }
+}
+function round2(v){ return Math.round(v*100)/100; }
+function cgRHorse(body, j){
+ body.innerHTML=
+  '<div class="horseTrack" id="hT"></div>'+
+  '<div class="rlChips" style="margin-top:9px"><span class="rlChipsLbl">Chips</span><div id="hC2" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>';
+ cgChipsRender(el('hC2'), cgLabels);
+ var RUN=[[1,'Thunder',2.4],[2,'Blaze',3.1],[3,'Comet',4.0],[4,'Rocket',6.5],[5,'Ghost',9.0]];
+ var EMO=['🐎','🐏','🐇','🐎','🦊'];
+ var t=el('hT');
+ var pick=0;
+ if(t){
+  t.innerHTML='';
+  for(var i=0;i<RUN.length;i++){
+   (function(idx){
+    var lane=document.createElement('div');
+    lane.className='hLane';
+    lane.innerHTML='<div class="hName" style="left:6px;right:auto">'+RUN[idx][0]+' · '+RUN[idx][1]+'</div><div class="hName">'+RUN[idx][2].toFixed(1)+'x</div><div class="hRunner" id="hR'+idx+'">'+EMO[idx]+'</div>';
+    lane.addEventListener('click',function(){
+     pick=RUN[idx][0];
+     var all=t.querySelectorAll('.hLane');
+     for(var k=0;k<all.length;k++){ all[k].classList.remove('hWin'); }
+     lane.classList.add('hWin'); sfx('click');
+    });
+    t.appendChild(lane);
+   })(i);
+  }
+ }
+ var row=cgRowOf(body);
+ row.appendChild(cgBtn('Bet {a}c','okbtn',function(){
+  if(!pick){ cgMsg('<span class="l">Tap a runner first</span>'); sfx('lose'); return; }
+  cgApi('horse','race',{ pick:pick });
+ },'Bet {a}c'));
+ function run(win){
+  for(var i=0;i<RUN.length;i++){
+   var r=el('hR'+i);
+   if(!r) continue;
+   var isW=(RUN[i][0]==win);
+   var pct=isW? 88 : (60+Math.floor(Math.random()*26));
+   r.style.left=pct+'%';
+  }
+ }
+ for(var q=0;q<RUN.length;q++){ var rr=el('hR'+q); if(rr){ rr.style.left='2px'; } }
+ if(j && j.game==='horse'){
+  setTimeout(function(){ run(parseInt(j.win)||1); },120);
+  setTimeout(function(){
+   var lanes=t? t.querySelectorAll('.hLane'):[];
+   for(var i=0;i<RUN.length;i++){ if(RUN[i][0]==parseInt(j.win) && lanes[i]){ lanes[i].classList.add('hWin'); } }
+   cgMsg('Winner: runner '+parseInt(j.win)+' · '+cgRes(j));
+   burst(j.won>0?'🏇':'💔',12); sfx(j.won>0?'win':'lose');
+   if(j.won>0){ confetti(); }
+  },3700);
+  cgMsg('And theyre off...');
+ } else { cgMsg('Tap a runner, then watch the 15 second sprint.'); }
+}
+function cgState(){
+ call('cg_state').then(function(j){
+  if(!j || !j.ok) return;
+  cg.saved=j.games||{};
+ });
 }
 function setAdminUI(){
  var on=!!state.isAdmin;
@@ -4551,7 +5377,7 @@ function boot(){
  for(var i=0;i<mis.length;i++){
   mis[i].addEventListener('click',function(){ var g=this.getAttribute('data-go'); if(g) showTab(g); });
  }
- renderGames(); renderLog(); buildSelects(); applyLang(); loadFx(); updBal();
+ renderGames(); renderLog(); buildSelects(); applyLang(); loadFx(); updBal(); cgTiles();
  on('btnSync',function(){ loadBalance(true); });
  on('btnPurge',purge);
  var mb=el('btnMute');
@@ -4584,6 +5410,8 @@ function boot(){
  on('adLeftBtn',adminLoadLeft);
  on('bonusClaim',claimBonus);
  on('demoClaim',claimDemo);
+ on('cgBack',cgClose);
+ on('casBanner',function(){ var b=el('cgBox'); if(b && b.style.display!=='none'){ cgClose(); return; } cgOpen('bj'); });
  on('rlGoBtn',rlPlace);
  on('rlPickGreen',function(){ rlPick('green'); });
  on('rlPickWhite',function(){ rlPick('white'); });
