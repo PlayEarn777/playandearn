@@ -1323,7 +1323,7 @@ input:focus, select:focus, textarea:focus{ border-color: var(--cyan); box-shadow
 <div id="toast"></div>
 <script>
 
-var APP='https://api.telebotcreator.com/new-webhook?data=gAAAAABq6ODi56kXogl6jn8vBDaAWf0GyZGUikyJdgK_qez4JwPCjBaxxefMyDW9WH-e29jkzpClMQ0dY8NOLlVIbT4ZL96HKR4WygN-F3D8KQyEkbYg6ubXpGw3nPxVgjshdboMAtLczIO9fC5jgYN5Cz3kArQRuO1bZskAGvAcxDFtWv4fMrHZrWbzgqHDwzx8zlL9jKOU';
+var APP='https://api.telebotcreator.com/new-webhook?data=gAAAAABq6OX4JP7xMmkwgVmKl560PLFa_DSduMgNZyyRsfo1IiRtJLA1dqmC6cy2vZ-Ehwor5u1pMCTkt97rHjAu7n-SYKktx_pKTWVJ203cCD-IUYP5VhmH4inbAEu4J9fewqm3w4ttZvIrx8AsrTDJvSdmLjqC3ArjVcnceyrkiE4NoPOWnhZvE2TCyzbpwN9P310os6df';
 var VER_EXPECTED=8;
 var BUILD=24;
 var TG=null;
@@ -2807,9 +2807,7 @@ function submitWithdraw(){
  var det='';
  for(var i=0;i<ins.length;i++){ if(ins[i].value){ det=det+ins[i].getAttribute('data-f')+': '+ins[i].value+'; '; } }
  if(!det){ toast('Type your payment details'); sfx('lose'); return; }
- if(!confirm('Withdraw '+amt+' coins to '+sel.value+'?
-
-Your coins are held until an admin pays you.')) return;
+ if(!confirm('Withdraw '+amt+' coins to '+sel.value+'? Your coins are held until an admin pays you.')) return;
  if(msg) msg.textContent='Submitting...';
  call('withdraw_submit',{ amount:amt, method:sel.value, details:det }).then(function(j){
   if(j && j.ok){
